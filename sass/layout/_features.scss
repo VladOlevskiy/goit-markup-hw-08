@@ -1,0 +1,30 @@
+.features-list {
+  display: flex;
+  &__title {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-family: inherit;
+    line-height: 1.71;
+  }
+  &_item {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__thumb {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-background-color);
+    margin-bottom: 30px;
+  }
+}
