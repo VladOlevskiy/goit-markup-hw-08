@@ -1,6 +1,11 @@
 .work.section {
   padding-top: 0px;
 }
+.work {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
 
 .work-title {
   text-align: center;

@@ -24,13 +24,25 @@
   left: 50%;
   padding: 40px;
 
-  min-height: 581px;
-  min-width: 528px;
-
   background-color: #fff;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 479px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 450px;
+    max-height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 530px;
+    max-height: 580px;
+  }
 }
 
 .icon-close {
@@ -101,7 +113,7 @@
 }
 
 .form-input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -115,7 +127,7 @@
 }
 
 .comment-textarea {
-  width: 448px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -155,24 +167,30 @@
 }
 
 .form-policy {
-  margin-left: 12px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }
 .checkbox-label {
   font-family: inherit;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--main-body-color);
   display: flex;
-  align-items: center;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    align-items: center;
+  }
   &::before {
     content: '';
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 3px;
-    margin-right: 7px;
+    margin-right: 4px;
     .checkbox-input:checked + & {
       background-image: url(../images/check.svg);
       background-color: var(--accent-color);

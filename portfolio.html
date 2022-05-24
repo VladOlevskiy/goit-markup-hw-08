@@ -41,6 +41,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="menu-open-btn">
+          <svg class="mob-menu__icon-open" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-mob-open"></use>
+          </svg>
+        </button>
         <ul class="contact-list list">
           <li class="contact-list__item">
             <a
@@ -62,6 +67,60 @@
             </a>
           </li>
         </ul>
+        <div class="mob-menu is-hidden">
+          <button type="button" class="menu-close-btn">
+            <svg class="mob-menu__icon-close" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-mob-close"></use>
+            </svg>
+          </button>
+          <div class="mob-list-wrap">
+            <ul class="mob-list list">
+              <li class="mob-list__item">
+                <a href="" class="mob-list__link link nav">Студия</a>
+              </li>
+              <li class="mob-list__item">
+                <a href="./portfolio.html" class="mob-list__link link nav"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-list__item">
+                <a href="" class="mob-list__link link nav">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-contact-wrap">
+            <ul class="mob-contact-list list">
+              <li class="mob-contact-list__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mob-contact-list__tel link contact"
+                  >+38 (096) 111-11-11
+                </a>
+              </li>
+              <li class="mob-contact-list__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contact-list__mail link contact"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link link">Instagram</a>
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link link">Twitter</a>
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link link">Facebook</a>
+              </li>
+              <li class="mob-soc-list__item">
+                <a href="" class="mob-soc-list__link link">Linkedin</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -91,20 +150,43 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-1.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-1.jpg    1x,
+                        ./images/product-1-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-1-tab.jpg    1x,
+                        ./images/product-1-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-1-mob.jpg    1x,
+                        ./images/product-1-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-1.jpg"
+                      alt="ноутбук"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="product-list__bottom-thumb">
+                <div class="product-list__bottom-thumb bottom-thumb">
                   <h2 class="product-list__title">Технокряк</h2>
                   <p class="product-list__type">Веб-сайт</p>
                 </div>
@@ -113,13 +195,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-2.jpg"
-                    alt="два парня играют в баскетбол"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-2.jpg    1x,
+                        ./images/product-2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-2-tab.jpg    1x,
+                        ./images/product-2-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-2-mob.jpg    1x,
+                        ./images/product-2-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-2.jpg"
+                      alt="два парня играют в баскетбол"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -137,13 +242,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-3.jpg"
-                    alt="емблема ресторона риба"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-3.jpg    1x,
+                        ./images/product-3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-3-tab.jpg    1x,
+                        ./images/product-3-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-3-mob.jpg    1x,
+                        ./images/product-3-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-3.jpg"
+                      alt="емблема ресторона риба"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -159,13 +287,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-4.jpg"
-                    alt="наушники"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-4.jpg    1x,
+                        ./images/product-4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-4-tab.jpg    1x,
+                        ./images/product-4-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-4-mob.jpg    1x,
+                        ./images/product-4-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-4.jpg"
+                      alt="наушники"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -181,20 +332,43 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-5.jpg"
-                    alt="две картонных коробки"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-5.jpg    1x,
+                        ./images/product-5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-5-tab.jpg    1x,
+                        ./images/product-5-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-5-mob.jpg    1x,
+                        ./images/product-5-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-5.jpg"
+                      alt="две картонных коробки"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="div-product-item">
+                <div class="product-list__bottom-thumb">
                   <h2 class="product-list__title">Проект Boxes</h2>
                   <p class="product-list__type">Приложение</p>
                 </div>
@@ -203,13 +377,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-6.jpg"
-                    alt="компьютер"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-6.jpg    1x,
+                        ./images/product-6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-6-tab.jpg    1x,
+                        ./images/product-6-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-6-mob.jpg    1x,
+                        ./images/product-6-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-6.jpg"
+                      alt="компьютер"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -227,13 +424,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-7.jpg"
-                    alt="книжка"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-7.jpg    1x,
+                        ./images/product-7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-7-tab.jpg    1x,
+                        ./images/product-7-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-7-mob.jpg    1x,
+                        ./images/product-7-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-7.jpg"
+                      alt="книжка"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -249,13 +469,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-8.jpg"
-                    alt="лэйба"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-8.jpg    1x,
+                        ./images/product-8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-8-tab.jpg    1x,
+                        ./images/product-8-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-8-mob.jpg    1x,
+                        ./images/product-8-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-8.jpg"
+                      alt="лэйба"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -271,13 +514,36 @@
             <li class="product-list__item">
               <a href="" class="product-list__link link">
                 <div class="product-list__thumb">
-                  <img
-                    src="./images/product-9.jpg"
-                    alt="ноутбук"
-                    width="370"
-                    height="294"
-                    class="product-list__img"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/product-9.jpg    1x,
+                        ./images/product-9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-9-tab.jpg    1x,
+                        ./images/product-9-tab-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/product-9-mob.jpg    1x,
+                        ./images/product-9-mob-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/product-9.jpg"
+                      alt="ноутбук"
+                      width="370"
+                      height="294"
+                      class="product-list__img"
+                    />
+                  </picture>
                   <p class="product-list__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -300,66 +566,68 @@
     <!--Футер-->
     <footer class="footer">
       <div class="container footer-container">
-        <div class="footer-adress-div">
-          <a href="./index.html" class="logo footer__logo link logo--light"
-            ><span class="logo__name">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-list__item">
-                <p class="address-list__text addres-footer">
-                  г. Киев, пр-т Леси Украинки, 26
-                </p>
-              </li>
-              <li class="address-list__item">
-                <a
-                  href="mailto:info@example.com"
-                  class="address-list__link link addres-footer"
-                  >info@example.com
+        <div class="footer-adress-soc">
+          <div class="footer-adress-div">
+            <a href="./index.html" class="logo footer__logo link logo--light"
+              ><span class="logo__name">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address-list list">
+                <li class="address-list__item">
+                  <p class="address-list__text addres-footer">
+                    г. Киев, пр-т Леси Украинки, 26
+                  </p>
+                </li>
+                <li class="address-list__item">
+                  <a
+                    href="mailto:info@example.com"
+                    class="address-list__link link addres-footer"
+                    >info@example.com
+                  </a>
+                </li>
+                <li class="address-list__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="address-list__link link addres-footer"
+                    >+38 (096) 111-11-11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-soc-div">
+            <p class="text-footer">присоединяйтесь</p>
+            <ul class="footer-soc-list list">
+              <li class="footer-soc-list__item">
+                <a href="" class="footer-soc-list__link">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address-list__item">
-                <a
-                  href="tel:+380961111111"
-                  class="address-list__link link addres-footer"
-                  >+38 (096) 111-11-11
+              <li class="footer-soc-list__item">
+                <a href="" class="footer-soc-list__link">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-list__item">
+                <a href="" class="footer-soc-list__link">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-list__item">
+                <a href="" class="footer-soc-list__link">
+                  <svg class="footer-soc-list__icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-soc-div">
-          <p class="text-footer">присоединяйтесь</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-list__item">
-              <a href="" class="footer-soc-list__link">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a href="" class="footer-soc-list__link">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a href="" class="footer-soc-list__link">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-list__item">
-              <a href="" class="footer-soc-list__link">
-                <svg class="footer-soc-list__icon" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer-mail-div">
           <div class="footer-form-div">
@@ -385,5 +653,7 @@
         </div>
       </div>
     </footer>
+    <!-- __________________________________SKRIPT______________________________________________ -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>
